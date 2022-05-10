@@ -19,8 +19,16 @@ namespace ADOPM3_CodeExercises
                 cities[i] = names[rnd.Next(0, names.Length)].Trim();
             }
 
+            Array.ForEach(numbers, WriteInt);
+            
+
             WriteLists(numbers, cities);
         }
+
+
+        static void WriteInt(int item) => cw.WriteInt(item);
+
+
 
         static void WriteLists(int[] _numbers, string[] _cities)
         {
