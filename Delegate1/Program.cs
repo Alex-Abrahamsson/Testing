@@ -42,7 +42,7 @@ namespace Delegate1
             Array.ForEach(evenlist, WriteItem);
 
             Console.WriteLine();
-            Array.ForEach(Array.FindAll(cities, IsLongName), WriteItem);
+            Array.ForEach(Array.FindAll(cities, IsLongerThan6Letters), WriteItem);
             #endregion
 
             #region Exercises 10-11
@@ -84,7 +84,7 @@ namespace Delegate1
 
         #region Exercises 8-9
         public static bool IsEven(int item) => item % 2 == 0;
-        public static bool IsLongName(string item) => item.Length > 6;
+        public static bool IsLongerThan6Letters(string item) => item.Length > 6;
         #endregion
 
         #region Exercises 10-11
