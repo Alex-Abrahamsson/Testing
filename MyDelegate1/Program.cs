@@ -19,15 +19,24 @@ namespace MyDelegate1 // Note: actual namespace depends on the project name.
             }
             Ex3(numbers, citeis); //3
 
-            Array.ForEach(numbers, Ex4); //4
-            Array.ForEach(citeis, Ex5); //5
-            Array.ForEach(numbers, Ex6); //6
+            Array.ForEach(numbers, Ex4); //4 with Delegate
+            Array.ForEach(citeis, Ex5); //5 With Delegate
+
+            Array.ForEach(numbers, x => System.Console.WriteLine(x)); // 4 with Lambda
+            Array.ForEach(citeis, c => System.Console.WriteLine(c)); // 5 with Lambda
+
+            var evens = Array.FindAll(numbers, n => n% 2 == 0);// 8
+            Array.ForEach(evens, e => System.Console.WriteLine("Even numbers " + e));
+
+            var longCities = Array.FindAll(citeis, c => c.Length > 5);// 9
+            Array.ForEach(longCities, x => System.Console.WriteLine("LongNames " + x));
+
+            System.Console.WriteLine(Array.FindLast(citeis, c => c.Length > 8));// 11
 
         }
 
 
 
-        static void Ex6(T item) => System.Console.WriteLine(item);
         static void Ex5(string name) => System.Console.WriteLine(name);
         static void Ex4(int item) => System.Console.WriteLine(item);
 
