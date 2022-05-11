@@ -33,6 +33,10 @@ namespace MyDelegate1 // Note: actual namespace depends on the project name.
 
             System.Console.WriteLine(Array.FindLast(citeis, c => c.Length > 8));// 11
 
+
+            int sum = 0;
+            Array.ForEach(numbers, n => sum += n);// 12
+            System.Console.WriteLine($"the sum of all numbers are {sum}");
         }
 
 
